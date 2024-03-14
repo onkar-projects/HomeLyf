@@ -1,5 +1,6 @@
 package HomeLyf.test;
 
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import HomeLyf.EndPoints.UserEndPoints;
@@ -21,6 +22,7 @@ public class User {
 	SignIn_Payload signin;
 	ForgotPassword_Payload forgotpass;
 	ForgotPasswordOTP_Payload forgotpassOTP;
+	Logger logger;
 	
 	
 
@@ -33,13 +35,14 @@ public class User {
 		signin = new SignIn_Payload();
 		forgotpass = new ForgotPassword_Payload();
 		forgotpassOTP = new ForgotPasswordOTP_Payload();
+		logger = org.apache.logging.log4j.LogManager.getLogger(this.getClass());
 
 	}
 
 	@Test(priority = 1,dataProvider = "userEmail", dataProviderClass = DataProvider.class)
 	public void sendEmailOTP_Test(String email) {
 		sendotp = new SendEmailOTP_Payload(email);
-		
+		logger.info("-------------sendding Email----------");
 		Response response = UserEndPoints.sendEmail(sendotp);
 		response.then().log().all();
 		Assert.assertEquals(response.statusCode(), 200);
