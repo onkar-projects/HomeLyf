@@ -21,9 +21,6 @@ public class ExtentReport implements ITestListener {
 	String repName;
 	
 	
-
-
-	@Override
 	public void onStart(ITestContext context) {
 		String timeStamp = new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
 		repName = "Test-Report-"+ timeStamp+".html";
@@ -42,10 +39,10 @@ public class ExtentReport implements ITestListener {
 		extent.setSystemInfo("user", "Onkar");
 		extent.setSystemInfo("Environment", "QA");
 		
-		ITestListener.super.onStart(context);
+		
 	}
 
-	@Override
+	
 	public void onTestFailure(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.assignCategory(result.getMethod().getGroups());
@@ -54,7 +51,7 @@ public class ExtentReport implements ITestListener {
 		test.log(Status.FAIL, result.getThrowable().getMessage());
 	}
 
-	@Override
+	
 	public void onTestSkipped(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.assignCategory(result.getMethod().getGroups());
@@ -69,18 +66,31 @@ public class ExtentReport implements ITestListener {
 //		ITestListener.super.onTestStart(result);
 //	}
 
-	@Override
+	
 	public void onTestSuccess(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.assignCategory(result.getMethod().getGroups());
 		test.createNode(result.getName());
 		test.log(Status.PASS,"Test Passed");
 		
-		ITestListener.super.onTestSuccess(result);
 	}
-	@Override
+	
 	public void onFinish(ITestContext context) {
 		extent.flush();
+	}
+
+
+	@Override
+	public void onTestStart(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
