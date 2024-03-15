@@ -12,8 +12,7 @@
           <include name="verifyOtp_Test" invocation-numbers="0 1 2 3"/>
           <include name="signIn_Test" invocation-numbers="0 1 2"/>
           <include name="signUp_Test" invocation-numbers="0 1 2 3"/>
-          <include name="forgotPasswordOTP_Test" invocation-numbers="1 2 3"/>
-          <include name="sendEmailOTP_Test" invocation-numbers="0"/>
+          <include name="forgotPasswordOTP_Test" invocation-numbers="0 1 2 3"/>
           <include name="data"/>
         </methods>
       </class> <!-- HomeLyf.test.User -->

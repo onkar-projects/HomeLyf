@@ -5,7 +5,7 @@
     <classes>
       <class name="HomeLyf.test.User">
         <methods>
-          <include name="forgotPassword_Test" invocation-numbers="1 2"/>
+          <include name="verifyOtp_Test" invocation-numbers="1 2 3"/>
           <include name="data"/>
         </methods>
       </class> <!-- HomeLyf.test.User -->

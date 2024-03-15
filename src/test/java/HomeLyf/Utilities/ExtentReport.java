@@ -1,8 +1,7 @@
 package HomeLyf.Utilities;
 
 import java.text.SimpleDateFormat;
-
-import org.apache.poi.hpsf.Date;
+import java.util.Date;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -26,10 +25,10 @@ public class ExtentReport implements ITestListener {
 
 	@Override
 	public void onStart(ITestContext context) {
-//		String timeStamp = new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
-//		repName = "Test-Report-"+ timeStamp+".html";
+		String timeStamp = new SimpleDateFormat("yyyy.mm.dd.hh.mm.ss").format(new Date());
+		repName = "Test-Report-"+ timeStamp+".html";
 		
-		sparkReporter = new ExtentSparkReporter(".\\reports\\");
+		sparkReporter = new ExtentSparkReporter(".\\reports\\"+repName);
 		
 		sparkReporter.config().setDocumentTitle("DSS");
 		sparkReporter.config().setReportName("QSTAS");
