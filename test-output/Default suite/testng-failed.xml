@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="HomeLyf.test.User">
+      <class name="HomeLyf.test.QDTAS_LoginTestCase">
         <methods>
-          <include name="verifyOtp_Test" invocation-numbers="1 2 3"/>
-          <include name="data"/>
+          <include name="qdtasUpdateUser"/>
+          <include name="QDTAS_data"/>
         </methods>
-      </class> <!-- HomeLyf.test.User -->
+      </class> <!-- HomeLyf.test.QDTAS_LoginTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

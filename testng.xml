@@ -5,9 +5,18 @@
  <listeners>
 	 <listener class-name="HomeLyf.Utilities.ExtentReport"/>
  </listeners>
+
   <test thread-count="5" name="HomeLyfTest">
+
     <classes>
-      <class name="HomeLyf.test.User"/>
+     <!--  <class name="HomeLyf.test.User"/>-->
+      <class name ="HomeLyf.test.QDTAS_LoginTestCase">
+		  <methods>
+			  <include name="qdtasLoginUserTest"/>
+			  <include name="qdtasVerifyUserTokenTest"/>
+			   <include name="qdtasAddUser"/>
+		  </methods>
+		  </class>
     <!--   <class name="HomeLyf.test.Partner"/>-->
     </classes>
   </test> <!-- HomeLyfTest -->
