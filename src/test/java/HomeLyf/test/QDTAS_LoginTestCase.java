@@ -82,7 +82,7 @@ public class QDTAS_LoginTestCase {
 		addUser.setDesignation(designation);
 		addUser.setBirthDate(bday);
 
-		Response response = QDTAS_UserEndPoint.QDTAS_UserAdd(Authorization, addUser);
+		Response response = QDTAS_UserEndPoint.QDTAS_UserAdd(token, addUser);
 		response.then().log().all();
 
 		JsonPath js = CommonMethods.jsonToString(response);
@@ -120,7 +120,10 @@ public class QDTAS_LoginTestCase {
 	}
 
 	@Test(priority = 6, dataProvider = "qdtasUpdateUserDetails", dataProviderClass = DataProvider.class)
-	public void qdtasUpdateUser(String uname, String email, String pass, String fname, String mname, String lname, String gender, String deptId, String role, String phNo, String address, String destination,String verifyEmail, String bdate, String joiningDate ) {
+	public void qdtasUpdateUser(String uname, String email, String pass, String fname, String mname, String lname,
+			String gender, String deptId, String role, String phNo, String destination, String bdate,
+			String joiningDate, String address) {
+
 		updateUser.setUserName(uname);
 		updateUser.setEmail(email);
 		updateUser.setPassword(pass);
@@ -132,7 +135,7 @@ public class QDTAS_LoginTestCase {
 		updateUser.setRole(role);
 		updateUser.setPhoneNumber(phNo);
 		updateUser.setDesignation(destination);
-		updateUser.setEmailVerified(verifyEmail);
+		updateUser.setEmailVerified(true);
 		updateUser.setBirthDate(bdate);
 		updateUser.setJoinDate(joiningDate);
 		updateUser.setAddress(address);
@@ -143,14 +146,14 @@ public class QDTAS_LoginTestCase {
 		Assert.assertEquals(response.statusCode(), 200);
 	}
 
-	@Test(priority = 7, enabled = false)
-	public void qdtasDeleteUserTest() {
-
-		Response response = QDTAS_UserEndPoint.QDTAS_UserDelete(token, userId);
-		response.then().log().all();
-
-		Assert.assertEquals(response.statusCode(), 200);
-
-	}
+//	@Test(priority = 7, enabled = false)
+//	public void qdtasDeleteUserTest() {
+//
+//		Response response = QDTAS_UserEndPoint.QDTAS_UserDelete(token, userId);
+//		response.then().log().all();
+//
+//		Assert.assertEquals(response.statusCode(), 200);
+//
+//	}
 
 }
