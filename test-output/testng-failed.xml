@@ -5,8 +5,8 @@
     <classes>
       <class name="HomeLyf.test.QDTAS_LoginTestCase">
         <methods>
-          <include name="qdtasUpdateUser"/>
           <include name="QDTAS_data"/>
+          <include name="qdtasAddUser" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- HomeLyf.test.QDTAS_LoginTestCase -->
     </classes>
