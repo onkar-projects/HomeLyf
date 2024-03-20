@@ -14,7 +14,7 @@ public class QDTAS_UserUpdatePayload {
 	public  String phoneNumber;
 	public  String address;
 	public  String designation;
-	public  String emailVerified;
+	public  boolean emailVerified;
 	public  String birthDate;
 	public  String joinDate;
 	
@@ -90,10 +90,10 @@ public class QDTAS_UserUpdatePayload {
 	public  void setDesignation(String designation) {
 		this.designation = designation;
 	}
-	public  String getEmailVerified() {
+	public  boolean getEmailVerified() {
 		return emailVerified;
 	}
-	public  void setEmailVerified(String emailVerified) {
+	public  void setEmailVerified(boolean emailVerified) {
 		this.emailVerified = emailVerified;
 	}
 	public  String getBirthDate() {

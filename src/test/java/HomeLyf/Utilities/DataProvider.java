@@ -97,21 +97,21 @@ public class DataProvider {
 	}
 
 	@org.testng.annotations.DataProvider(name = "qdtasNewUserDetails")
-	public static String[][] qdtasNewUserData() throws IOException {
-
-		int rowcount = lu.getRowCount("QDTAS1");
-		int colcount = lu.getCellCount("QDTAS1", 1);
-		System.out.println("Row count= " + rowcount);
-		System.out.println("colomn count= " + colcount);
-		String NewUserData[][] = new String[rowcount][colcount - 2];
-
-		for (int i = 2; i <= rowcount; i++) {
-			for (int j = 0; j < colcount - 2; j++) {
-				NewUserData[i - 2][j] = lu.getCellData("QDTAS1", i, j);
+		public static String[][] qdtasNewUserData() throws IOException {
+	
+			int rowcount = lu.getRowCount("QDTAS1");
+			int colcount = lu.getCellCount("QDTAS1", 1);
+			System.out.println("Row count= " + rowcount);
+			System.out.println("colomn count= " + colcount);
+			String NewUserData[][] = new String[rowcount-1][colcount-2];
+	
+			for (int i = 2; i < rowcount+1; i++) {
+				for (int j = 0; j < colcount - 2; j++) {
+					NewUserData[i - 2][j] = lu.getCellData("QDTAS1", i, j);
+				}
 			}
+			return NewUserData;
 		}
-		return NewUserData;
-	}
 
 	@org.testng.annotations.DataProvider(name = "qdtasNewLoginDetails")
 	public static String[][] qdtasNewLoginDetail() throws IOException {
@@ -119,9 +119,9 @@ public class DataProvider {
 		int rowcount = lu.getRowCount("QDTAS1");
 		String adminData[][] = new String[1][2];
 
-		for (int i = 2; i <= rowcount; i++) {
-			adminData[0][0] = lu.getCellData("QDTAS1", 1, 1);
-			adminData[0][1] = lu.getCellData("QDTAS1", 1, 2);
+		for (int i = 2; i <=rowcount; i++) {
+			adminData[i-2][0] = lu.getCellData("QDTAS1", 2, 1);
+			adminData[i-2][1] = lu.getCellData("QDTAS1", 2, 2);
 		}
 		return adminData;
 	}
@@ -129,19 +129,17 @@ public class DataProvider {
 	@org.testng.annotations.DataProvider(name = "qdtasUpdateUserDetails")
 		public static String[][] qdtasUpdateUserData() throws IOException {
 	
-			int rowcount = lu.getRowCount("QDTAS1");
-			int colcount = lu.getCellCount("QDTAS1", 2);
-			
-			System.out.println("Row count= " + rowcount);
-			System.out.println("colomn count= " + colcount);
-			
-			String updateUserData[][] = new String[rowcount][colcount-1];
-			
-			for (int i = 2; i <= rowcount; i++) {
-				for (int j = 0; j < colcount-1; j++) {
-					updateUserData[i-2][j] = lu.getCellData("QDTAS1", i, j+1);
-				}
+		int rowcount = lu.getRowCount("QDTAS1");
+		int colcount = lu.getCellCount("QDTAS1", 1);
+		System.out.println("Row count= " + rowcount);
+		System.out.println("colomn count= " + colcount);
+		String NewUserData[][] = new String[rowcount-1][colcount];
+
+		for (int i = 2; i < rowcount+1; i++) {
+			for (int j = 0; j < colcount; j++) {
+				NewUserData[i - 2][j] = lu.getCellData("QDTAS1", i, j);
 			}
-			return updateUserData;
+		}
+		return NewUserData;
 		}
 }
