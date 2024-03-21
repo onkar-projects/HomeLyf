@@ -20,9 +20,9 @@ public class QDTAS_LoginTestCase {
 	QDTAS_UserLoginPayload loginUser;
 	QDTAS_UserUpdatePayload updateUser;
 	QDTAS_UserAddPayload addUser;
-	String Authorization = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJleHAiOjE3MTA4NjE2NDIsImlhdCI6MTcxMDgyNTY0Mn0.6QDTydb_SbDvGGNRGNtpd6nsyBBvDk7qiVNBF7G__tI";
+	String Authorization = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJleHAiOjE3MTEwNDk4NzQsImlhdCI6MTcxMTAxMzg3NH0.UVej8mJsvPcIpsNn47ur97xCsipYjnwQ83uKfgviX_I";
 	String token;
-	String userId;
+	String userId ;
 	String emailId = "riloro8063@hisotyr.com";
 	String pass;
 

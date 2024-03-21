@@ -21,8 +21,6 @@ public class User {
 	SignIn_Payload signin;
 	ForgotPassword_Payload forgotpass;
 	ForgotPasswordOTP_Payload forgotpassOTP;
-	
-	
 
 	@BeforeTest
 	public void data() {
@@ -35,16 +33,16 @@ public class User {
 
 	}
 
-	@Test(priority = 1,dataProvider = "userEmail", dataProviderClass = DataProvider.class)
+	@Test(priority = 1, dataProvider = "userEmail", dataProviderClass = DataProvider.class)
 	public void sendEmailOTP_Test(String email) {
 		sendotp = new SendEmailOTP_Payload(email);
-		
+
 		Response response = UserEndPoints.sendEmail(sendotp);
 		response.then().log().all();
 		Assert.assertEquals(response.statusCode(), 200);
 	}
 
-	@Test(priority = 2,dataProvider = "userEmail", dataProviderClass = DataProvider.class)
+	@Test(priority = 2, dataProvider = "userEmail", dataProviderClass = DataProvider.class)
 	public void verifyOtp_Test(String email) {
 		verifyotp.setEmail(email);
 		verifyotp.setOTP("4618");
@@ -55,23 +53,23 @@ public class User {
 
 	@Test(priority = 3, dataProvider = "Data", dataProviderClass = DataProvider.class)
 	public void signUp_Test(String name, String email, String mobile, String password, String otp) {
-		
+
 		signup.setName(name);
 		signup.setEmail(email);
 		signup.setMobile(mobile);
 		signup.setPassword(password);
 		signup.setOtp("6758");
-		
+
 		Response response = UserEndPoints.signUp(signup);
 		response.then().log().all();
 		Assert.assertEquals(response.statusCode(), 200);
 	}
 
-	@Test(priority = 4,  dataProvider = "useremailAndPassword", dataProviderClass = DataProvider.class)
-	public void signIn_Test(String email,String password) {
+	@Test(priority = 4, dataProvider = "useremailAndPassword", dataProviderClass = DataProvider.class)
+	public void signIn_Test(String email, String password) {
 		signin.setEmail(email);
 		signin.setPassword(password);
-		
+
 		Response response = UserEndPoints.signIn(signin);
 		response.then().log().all();
 		Assert.assertEquals(response.statusCode(), 200);
@@ -86,7 +84,7 @@ public class User {
 	}
 
 	@Test(priority = 6, dataProvider = "userEmailAndNewPass", dataProviderClass = DataProvider.class)
-	public void forgotPassword_Test(String email,String newpass) {
+	public void forgotPassword_Test(String email, String newpass) {
 		forgotpass.setEmail(email);
 		forgotpass.setNewPassword(newpass);
 		forgotpass.setOtp("3778");

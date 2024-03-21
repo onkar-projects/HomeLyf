@@ -15,7 +15,11 @@ import io.restassured.response.Response;
 public class UserEndPoints {
 
 	public static Response sendEmail(SendEmailOTP_Payload Payload) {
-		Response response = given().contentType(ContentType.JSON).body(Payload).log().all().when().post(Routes.sendEmail);
+		Response response = given()
+				.contentType(ContentType.JSON)
+				.body(Payload)
+				.log().all()
+				.when().post(Routes.sendEmail);
 		
 		return response;
 	}
@@ -31,7 +35,11 @@ public class UserEndPoints {
 	}
 
 	public static Response signIn(SignIn_Payload Payload) {
-		Response response = given().contentType(ContentType.JSON).body(Payload).log().all().when().post(Routes.signin);
+		Response response = given()
+				.contentType(ContentType.JSON)
+				.body(Payload)
+				.log().all()
+				.when().post(Routes.signin);
 		return response;
 	}
 

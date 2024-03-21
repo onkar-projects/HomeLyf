@@ -29,7 +29,7 @@ public class ExtentReport implements ITestListener {
 		
 		sparkReporter.config().setDocumentTitle("DSS");
 		sparkReporter.config().setReportName("QSTAS");
-		sparkReporter.config().setTheme(Theme.DARK);
+		sparkReporter.config().setTheme(Theme.STANDARD);
 		
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);

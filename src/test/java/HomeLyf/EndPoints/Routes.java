@@ -20,7 +20,7 @@ public class Routes {
 	public static String forgotPasswordPartner = base_url + "/sp/forgotpassword-partner";
 	
 //	Qdtas HRm User
-	public static String qdtasBaseURL = "https://qdtashrm-backend.onrender.com";
+	public static String qdtasBaseURL = "https://qdtas-hrm.onrender.com";
 	public static String qdtasUserLogin = qdtasBaseURL+"/user/login";
 	public static String qdtasUserEnable = qdtasBaseURL+"/user/enableUser/{userId}";
 	public static String qdtasUserDelete = qdtasBaseURL+"/user/deleteUser";

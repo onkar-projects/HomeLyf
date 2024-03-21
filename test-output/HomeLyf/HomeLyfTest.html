@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>HomeLyfTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 19 18:05:14 IST 2024</td>
+<td>Started on:</td><td>Thu Mar 21 16:03:54 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>20 seconds (20237 ms)</td>
+<tr><td>Total time:</td><td>22 seconds (22525 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,157 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasAddUser()'><b>qdtasAddUser</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase<br>Parameters: Onkar, mayivec121@irnini.com, Bebo@123, om, shiv, singal, Male, 2, QA, 1234567892, ManualTester, 1998-07-18</td>
-<td><div><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
-	at HomeLyf.test.QDTAS_LoginTestCase.qdtasAddUser(QDTAS_LoginTestCase.java:90)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 33 more
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1240796303", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1240796303'><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
-	at HomeLyf.test.QDTAS_LoginTestCase.qdtasAddUser(QDTAS_LoginTestCase.java:90)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 33 more
-</pre></div></td>
-<td>2</td>
-<td>HomeLyf.test.QDTAS_LoginTestCase@909217e</td></tr>
-<tr>
-<td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasAddUser()'><b>qdtasAddUser</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase<br>Parameters: null, null, null, null, null, null, null, null, null, null, null, null</td>
-<td><div><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
-	at HomeLyf.test.QDTAS_LoginTestCase.qdtasAddUser(QDTAS_LoginTestCase.java:90)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 33 more
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1457162311", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1457162311'><pre>io.restassured.path.json.exception.JsonPathException: Failed to parse the JSON document
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1002)
-	at io.restassured.path.json.JsonPath$4.doParseWith(JsonPath.java:967)
-	at io.restassured.path.json.JsonPath$JsonParser.parseWith(JsonPath.java:1047)
-	at io.restassured.path.json.JsonPath.get(JsonPath.java:202)
-	at io.restassured.path.json.JsonPath.getString(JsonPath.java:352)
-	at HomeLyf.test.QDTAS_LoginTestCase.qdtasAddUser(QDTAS_LoginTestCase.java:90)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.IllegalArgumentException: The JSON input text should neither be null nor empty.
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at io.restassured.internal.path.json.ConfigurableJsonSlurper.parseText(ConfigurableJsonSlurper.groovy:80)
-	at io.restassured.path.json.JsonPath$4$1.method(JsonPath.java:965)
-	at io.restassured.path.json.JsonPath$ExceptionCatcher.invoke(JsonPath.java:1000)
-	... 33 more
-</pre></div></td>
-<td>1</td>
-<td>HomeLyf.test.QDTAS_LoginTestCase@909217e</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -227,15 +76,35 @@ Caused by: java.lang.IllegalArgumentException: The JSON input text should neithe
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasLoginUserTest()'><b>qdtasLoginUserTest</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase<br>Parameters: kure.onkar41@gmail.com, Onkar@41</td>
+<td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasLoginNewUserTest()'><b>qdtasLoginNewUserTest</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase<br>Parameters: mopovot450@hdrlog.com, Bebo@123</td>
 <td></td>
-<td>8</td>
-<td>HomeLyf.test.QDTAS_LoginTestCase@909217e</td></tr>
+<td>1</td>
+<td>HomeLyf.test.QDTAS_LoginTestCase@3f191845</td></tr>
+<tr>
+<td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasLoginUserTest()'><b>qdtasLoginUserTest</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase<br>Parameters: admin@gmail.com, Admin@123</td>
+<td></td>
+<td>6</td>
+<td>HomeLyf.test.QDTAS_LoginTestCase@3f191845</td></tr>
+<tr>
+<td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasUpdateUser()'><b>qdtasUpdateUser</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase<br>Parameters: Onkar, mopovot450@hdrlog.com, Bebo@123, om, shiv, singal, Male, 2, QA, 1234567892, ManualTester, 1998-07-18, 2018-08-18, Pune</td>
+<td></td>
+<td>2</td>
+<td>HomeLyf.test.QDTAS_LoginTestCase@3f191845</td></tr>
+<tr>
+<td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasAddUser()'><b>qdtasAddUser</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase<br>Parameters: Onkar, mopovot450@hdrlog.com, Bebo@123, om, shiv, singal, Male, 2, QA, 1234567892, ManualTester, 1998-07-18</td>
+<td></td>
+<td>4</td>
+<td>HomeLyf.test.QDTAS_LoginTestCase@3f191845</td></tr>
+<tr>
+<td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasEnableUser()'><b>qdtasEnableUser</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase</td>
+<td></td>
+<td>2</td>
+<td>HomeLyf.test.QDTAS_LoginTestCase@3f191845</td></tr>
 <tr>
 <td title='HomeLyf.test.QDTAS_LoginTestCase.qdtasVerifyUserTokenTest()'><b>qdtasVerifyUserTokenTest</b><br>Test class: HomeLyf.test.QDTAS_LoginTestCase</td>
 <td></td>
-<td>2</td>
-<td>HomeLyf.test.QDTAS_LoginTestCase@909217e</td></tr>
+<td>1</td>
+<td>HomeLyf.test.QDTAS_LoginTestCase@3f191845</td></tr>
 </table><p>
 </body>
 </html>
